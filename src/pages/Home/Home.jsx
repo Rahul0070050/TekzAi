@@ -1,10 +1,11 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import bannerBackground from '../../assets/software-developer-6521720.png'; 
+import bannerBackground from '../../assets/home-banner.png'; 
 import iconLMS from "../../assets/p-1.png";
 import iconAMT from "../../assets/p-2.png";
 import iconCRM from "../../assets/p-3.png";
 import iconBKS from "../../assets/p-5.png";
+import homeBackground from "../../assets/home-background-image1.jpeg"
 
 import './Home.css';
 import { FaNetworkWired, FaCloud, FaTools, FaDatabase, FaCode, FaShieldAlt, FaCogs, FaChartLine } from 'react-icons/fa';
@@ -143,7 +144,8 @@ function Home() {
 
 
       {/* Services Section */}
-      <section className="services-section">
+      <section className="services-section"
+      style={{ backgroundImage: `url(${homeBackground})` }}>
         <h2 className="services-title">Services</h2>
         <p className="services-description">
           We take pride in simplifying IT environments and delivering cost-effective solutions to our clients.

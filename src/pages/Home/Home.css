@@ -17,6 +17,8 @@ html {
   text-align: center;
 }
 
+
+
 .hero-content {
   max-width: 800px;
   padding: 2rem;
@@ -167,7 +169,7 @@ html {
 .services-section {
   text-align: center;
   padding: 2rem 1.5rem;
-  background: url("https://img.freepik.com/free-vector/cement-wall-texture-background_53876-91519.jpg?t=st=1731616822~exp=1731620422~hmac=ddb71a58144eebfaaa5787168209b828e3b0e214ca904b857cb45877cf283be3&w=996");
+  /* background: url("https://img.freepik.com/free-vector/cement-wall-texture-background_53876-91519.jpg?t=st=1731616822~exp=1731620422~hmac=ddb71a58144eebfaaa5787168209b828e3b0e214ca904b857cb45877cf283be3&w=996"); */
   color: #ffffff;
   margin-bottom: 10px;
   box-shadow: #878383;
