@@ -124,7 +124,9 @@ html {
   color: #FFFFFF;
   width: 300px;
   text-align: left;
+ 
 }
+
 
 .product-features-card:hover{
   transform: scale(1.05);
@@ -234,6 +236,7 @@ html {
   .product-logo {
     position: static; /* Remove absolute positioning */
     margin-bottom: 1rem; /* Add space below the logo */
+    align-items: center;  
   }
 
   .product-logo img {

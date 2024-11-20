@@ -285,7 +285,7 @@ html {
 .product-home-card {
   /* background: url("https://img.freepik.com/free-vector/cement-wall-texture-background_53876-91519.jpg?t=st=1731616822~exp=1731620422~hmac=ddb71a58144eebfaaa5787168209b828e3b0e214ca904b857cb45877cf283be3&w=996"); */
   color: #ffffff;
-  padding: 2rem;
+  padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
@@ -433,7 +433,9 @@ html {
 @media (max-width: 768px) {
   .products-home-grid {
     grid-template-columns: 1fr;
+    gap: 100px;
   }
+  
 }
 
 /* Footer Section adjustments for mobile */

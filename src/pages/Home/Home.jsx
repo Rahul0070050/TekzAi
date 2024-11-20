@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import bannerBackground from '../../assets/home-banner.png'; 
+import bannerBackground from '../../assets/home-banner.webp'; 
 import iconLMS from "../../assets/p-1.png";
 import iconAMT from "../../assets/p-2.png";
 import iconCRM from "../../assets/p-3.png";
