@@ -1,0 +1,247 @@
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #242323;
+  --accent-color: #007BFF;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Navbar Container */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--primary-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+}
+
+.navbar-content, .contact-icons, .nav-links, .contact-item {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin: 0;
+}
+
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: var(--accent-color);
+}
+
+/* Contact Icons */
+.contact-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: auto;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.contact-item svg {
+  margin-right: 0.3rem;
+}
+
+.phone {
+  color: red;
+}
+
+.envelope {
+  color: chocolate;
+}
+
+/* Hamburger Menu - Hidden on larger screens */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  margin-left: 1rem;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--secondary-color);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+
+
+.close-button {
+  font-size: 2rem;
+  color: whitesmoke;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  display: none; /* Hide by default */
+}
+
+
+/* Mobile Navbar */
+@media (max-width: 768px) {
+  .contact-icons {
+    display: none;
+  }
+
+  /* Mobile Menu Overlay */
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%; /* Adjusted for narrower look */
+    height: 100%;
+    background-color:  #0d253f; /* Dark background */
+    padding-top: 2rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 2001;
+    gap: 1px;
+    color: #f0f0f0; /* Light text color */
+    text-align: left;
+    opacity: 98%;
+  }
+
+  .nav-links.show {
+    transform: translateX(0);
+  }
+
+  /* Close Button */
+  .close-button {
+    display: block;
+    font-size: 2rem;
+    color: #ffffff;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 3000;
+  }
+
+  /* Navbar Links in Mobile View */
+  .nav-links li {
+    margin: 1rem 0;
+    text-align: left;
+    padding-left: 2rem;
+  }
+
+  .nav-links a {
+    color: #f0f0f0;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: 300;
+    transition: color 0.3s;
+  }
+
+  .nav-links a:hover {
+    color: #66ccff; /* Accent color on hover */
+  }
+
+  /* Hamburger Menu */
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #1a1717; /* Light color for hamburger icon */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+  .hamburger.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* Social Icons at Bottom of Menu */
+  .social-icons {
+    display: flex;
+    justify-content: space-around;
+    padding: 1.5rem 0;
+    gap:1rem;
+    margin-bottom: 50rem;
+    margin-top: auto;
+    
+  }
+
+  .social-icons a {
+    color: #66ccff;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+    margin: 20px;
+  }
+
+  .social-icons a:hover {
+    color: #ffffff;
+  }
+ 
+}

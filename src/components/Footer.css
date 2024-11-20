@@ -1,0 +1,109 @@
+.footer {
+  background-color: #0d253f;
+  color: #ffffff;
+  padding: 2rem 1.5rem;
+  font-family: 'YourFontFamily', sans-serif;
+}
+
+/* Desktop Footer Content */
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-about, .footer-links, .footer-contact {
+  max-width: 300px;
+  text-align: center;
+}
+
+.footer-about h4, .footer-links h4, .footer-contact h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #66ccff;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #66ccff;
+}
+
+.footer-contact p {
+  font-size: 0.95rem;
+  margin: 0.3rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Space between icon and text */
+}
+
+.footer-contact i {
+  color: #e9e9e9; /* Accent color for icons */
+  font-size: 1.1rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 1rem;
+  font-size: 0.85rem;
+  color: #cccccc;
+}
+
+/* Mobile Sticky Footer */
+.footer-mobile {
+  display: none; /* Hidden on desktop by default */
+}
+
+@media (max-width: 768px) {
+  /* Hide Desktop Footer on Mobile */
+  .footer-content, .footer-bottom {
+    display: none;
+  }
+
+  /* Show Mobile Footer */
+  .footer-mobile {
+    display: flex;
+    justify-content: space-around;
+    background-color: #0d253f;
+    padding: .5rem ;
+    position: fixed;        /* Fixes the footer to the viewport */
+    bottom: 0;              /* Positions it at the bottom */
+    left: 0;
+    right: 0;
+    z-index: 2000;          /* Ensures it stays above other content */
+  }
+
+  .footer-mobile-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    font-size: 0.7rem;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .footer-mobile-item i {
+    font-size: 1.3rem;
+    margin-bottom: 0.2rem;
+  }
+}

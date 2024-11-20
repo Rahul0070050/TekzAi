@@ -1,0 +1,315 @@
+/* Page Layout */
+
+html {
+  scroll-behavior: smooth;
+}
+.products-page {
+  font-family: Arial, sans-serif;
+}
+
+/* Banner Section */
+.banner-section {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+}
+
+.banner-overlay h1 {
+  padding-left: 1rem;
+  font-size: 6rem;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 15rem;
+}
+
+/* Intro Content */
+.intro-content {
+  text-align: center;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.intro-content h1 {
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 1rem;
+}
+
+.intro-content h1:hover{
+  transform: scale(1.2);
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.intro-content p {
+  font-size: 1.1rem;
+  color: #333;
+}
+/* Product Section */
+.product-section {
+  position: relative;
+  padding: 40px;
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Product Overlay */
+.product-overlay {
+  background:url("https://wallpaperaccess.com/full/2584881.jpg");
+  padding: 30px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+/* Product Logo */
+.product-logo {
+  position: absolute;
+  top: 10px; /* Adjust top position as needed */
+  left: 300px; /* Adjust left position as needed */
+  width: 80px; /* Adjust width as desired */
+}
+
+.product-logo img {
+  width: 12rem;
+  height: 10rem;
+}
+
+/* Product Details */
+.product-details {
+  max-width: 50%;
+  margin-left: 100px; /* Space for the logo */
+}
+
+.product-details h2 {
+  font-size: 2rem;
+  color: #fff;
+}
+
+.product-details h2:hover{
+    transform: scale(1.05);
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.product-details p {
+  font-size: 1rem;
+  color: #ddd;
+}
+
+/* Product Features Card */
+.product-features-card {
+  background-color: #1E5A7D;
+  padding: 20px;
+  border-radius: 8px;
+  color: #FFFFFF;
+  width: 300px;
+  text-align: left;
+}
+
+.product-features-card:hover{
+  transform: scale(1.05);
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.product-features-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.product-features-list {
+  list-style: none;
+  padding: 0;
+}
+
+.product-features-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.product-features-list li i {
+  color: #4caf50;
+  margin-right: 8px;
+}
+
+.products-cta-button{
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.products-cta-button:hover{
+  background-color: #45a049;
+}
+
+.cta-content h2:hover{
+  transform: scale(1.05);
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.cta-button {
+  background-color: #0d253f;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+  transform: scale(0.95);
+  background-color: #0d253f !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+
+/* Responsive adjustments for Products Page */
+
+/* Adjustments for banner section */
+@media (max-width: 768px) {
+  .banner-section {
+    height: 50vh; /* Reduce height for smaller screens */
+  }
+
+  .banner-overlay h1 {
+    font-size: 2.5rem; /* Smaller font size */
+    margin-top: 5rem; /* Adjust margin */
+    text-align: center; /* Center-align for mobile */
+  }
+}
+
+/* Intro Content */
+@media (max-width: 768px) {
+  .intro-content h1 {
+    font-size: 1.8rem; /* Reduce font size */
+  }
+
+  .intro-content p {
+    font-size: 1rem; /* Smaller paragraph font */
+    padding: 0 1rem; /* Padding for readability */
+  }
+}
+
+/* Product Section */
+@media (max-width: 768px) {
+  .product-section {
+    flex-direction: column; /* Stack elements vertically */
+    padding: 20px; /* Reduce padding */
+    text-align: center; /* Center-align text */
+  }
+
+  .product-overlay {
+    flex-direction: column; /* Stack overlay content */
+    padding: 20px; /* Reduce padding */
+    align-items: center; /* Center items */
+  }
+
+  /* Product Logo */
+  .product-logo {
+    position: static; /* Remove absolute positioning */
+    margin-bottom: 1rem; /* Add space below the logo */
+  }
+
+  .product-logo img {
+    width: 8rem; /* Reduce logo size */
+    height: auto;
+  }
+
+  /* Product Details */
+  .product-details {
+    max-width: 100%; /* Full width on mobile */
+    margin: 0; /* Remove extra margin */
+  }
+
+  .product-details h2 {
+    font-size: 1.8rem; /* Smaller font size */
+    margin-bottom: 0.5rem;
+  }
+
+  .product-details p {
+    font-size: 1rem; /* Adjust paragraph font size */
+    color: #ddd;
+  }
+
+  /* Product Features Card */
+  .product-features-card {
+    width: 90%; /* Full width for mobile */
+    margin-top: 1rem; /* Space above card */
+  }
+
+  .product-features-card h3 {
+    font-size: 1.3rem; /* Smaller font size */
+    margin-bottom: 0.5rem;
+  }
+
+  .product-features-list li {
+    font-size: 0.9rem; /* Smaller font for features */
+  }
+
+  .products-cta-button {
+    width: 100%; /* Full-width button */
+    padding: 8px 15px;
+    font-size: 1rem; /* Adjust button font size */
+  }
+}
+
+/* CTA Section */
+@media (max-width: 768px) {
+  .cta-section {
+    max-width: 100%; /* Full width on mobile */
+    padding: 1.5rem; /* Reduce padding */
+  }
+
+  .cta-content h2 {
+    font-size: 1.5rem; /* Smaller heading */
+  }
+
+  .cta-content p {
+    font-size: 1rem; /* Adjust paragraph font size */
+    padding: 0 1rem; /* Padding for readability */
+  }
+
+  .cta-button {
+    width: 100%; /* Full-width button */
+    font-size: 1rem; /* Adjust button font size */
+  }
+}
+
+/* General adjustments for consistent mobile layout */
+@media (max-width: 768px) {
+  /* Consistent padding and spacing for all sections */
+  .products-page section {
+    padding: 1rem;
+  }
+
+  /* Center-align text and stack elements vertically */
+  .products-page, .intro-content, .product-section, .cta-section {
+    text-align: center;
+  }
+}

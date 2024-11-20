@@ -1,0 +1,457 @@
+/* Home.css */
+
+html {
+  scroll-behavior: smooth;
+}
+.hero-section {
+  position: relative;
+  height: 80vh; /* Adjust height as needed */
+  background-image: url('/src/assets/software-developer-6521720.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.cta-button {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
+  display: inline-block;
+  text-align: center;
+}
+
+.cta-button:hover {
+  transform: scale(0.95);
+}
+
+.cta-button.secondary {
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+.cta-button.secondary:hover{
+  transform: scale(0.95);
+}
+
+/* Company Section */
+.company-section {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+  margin-top: -1rem;
+  background-color: #f9f9f9;
+}
+
+.company-content {
+  display: flex;
+  align-items: center;
+  max-width: 1000px;
+  gap: 2rem;
+}
+
+.company-text {
+  max-width: 600px;
+}
+
+.company-text h2 {
+  font-size: 1.8rem;
+  color: #001630;
+  margin-bottom: 1rem;
+}
+
+.company-text h2:hover{
+  transform: scale(1.05);
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.company-text p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.read-more-button {
+  background-color: #002855;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.read-more-button:hover {
+  transform: scale(0.95);
+}
+
+.cta-section {
+  background-color: #ffffff;
+  color: #0d253f;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+  margin: 2rem auto;
+  max-width: 80%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cta-content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #0d253f;
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.cta-button {
+  background-color: #0d253f;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+  transform: scale(0.95);
+  background-color: #0d253f !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+/* Services Section */
+
+.services-section {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background: url("https://img.freepik.com/free-vector/cement-wall-texture-background_53876-91519.jpg?t=st=1731616822~exp=1731620422~hmac=ddb71a58144eebfaaa5787168209b828e3b0e214ca904b857cb45877cf283be3&w=996");
+  color: #ffffff;
+  margin-bottom: 10px;
+  box-shadow: #878383;
+}
+
+.services-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.services-description {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #f1f1f1;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.service-card {
+  background-color: #ededed;
+  color: #000000;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #66ccff;
+}
+
+.service-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #000000;
+}
+
+.services-buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.services-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.services-button.primary:hover,
+.services-button.secondary:hover {
+  transform: scale(0.95);
+}
+
+.services-button.primary {
+  background-color: #ffffff;
+  color: #0d253f;
+}
+
+.services-button.secondary {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.services-button.secondary:hover {
+  transform: scale(0.95);
+}
+/* Products Section */
+.products-home-section {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background-color: #f9f9f9; /* Match with services section */
+  color: #333;
+}
+
+.products-home-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #001630;
+}
+
+.products-home-description {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #001630;
+}
+
+.products-home-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+  gap: 1.5rem;
+}
+
+.product-home-card {
+  background: url("https://img.freepik.com/free-vector/cement-wall-texture-background_53876-91519.jpg?t=st=1731616822~exp=1731620422~hmac=ddb71a58144eebfaaa5787168209b828e3b0e214ca904b857cb45877cf283be3&w=996");
+  color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between; 
+  height: 100%; 
+}
+
+.product-home-card:hover {
+  transform: translateY(-10px);
+}
+
+.product-home-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+
+.product-home-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.product-home-description {
+  font-size: 1rem;
+  color: #ffffff;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.product-home-keypoints {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  flex-grow: 1;
+}
+
+.product-home-keypoint {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-home-buttons {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.product-home-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.product-home-button:hover {
+  transform: scale(0.95);
+}
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+  .hero-content {
+    max-width: 90%; /* Make the content fill more of the screen on mobile */
+    padding: 1.5rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem; /* Slightly smaller heading for mobile */
+  }
+
+  .hero-content p {
+    font-size: 1rem; /* Smaller paragraph font size for readability on mobile */
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 0.5rem; /* Reduce the gap between buttons */
+  }
+
+  .cta-button {
+    padding: 0.5rem 1rem; /* Adjust button padding */
+    font-size: 0.9rem; /* Slightly smaller font size */
+  }
+}
+
+
+/* Company Section Adjustments */
+@media (max-width: 768px) {
+  .company-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .company-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .company-text h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* CTA Section Adjustments */
+@media (max-width: 768px) {
+  .cta-section {
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+}
+
+/* Services Section Adjustments */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .service-card {
+    padding: 1.5rem;
+  }
+
+  .services-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .services-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Products Section Adjustments */
+@media (max-width: 768px) {
+  .products-home-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Footer Section adjustments for mobile */
+@media (max-width: 768px) {
+  .footer {
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links {
+    margin-top: 1rem;
+  }
+
+  .footer-links a {
+    font-size: 0.9rem;
+  }
+}
+
