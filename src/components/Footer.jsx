@@ -44,11 +44,11 @@ function Footer() {
       {/* Mobile Sticky Footer */}
       <div className="footer-mobile">
         <div className="footer-mobile-item">
-          <a href="tel:+91 9400480459" className="fas fa-phone"></a>
+          <a href="tel:+91 9400480459" className="fas fa-phone" style={{color:"white", textDecoration:"none"}}></a>
           <span>Call</span>
         </div>
         <div className="footer-mobile-item">
-          <a href="https://whatsapp.com" className="fab fa-whatsapp"></a>
+          <a href="https://whatsapp.com" className="fab fa-whatsapp" style={{color:"white", textDecoration:"none"}}></a>
           <span>WhatsApp</span>
         </div>
         <div className="footer-mobile-item" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
