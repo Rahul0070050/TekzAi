@@ -522,7 +522,7 @@ html {
   }
   .testimonials-grid {
     grid-template-columns: 1fr; /* Single column layout for mobile */
-    gap: 2.5rem; /* Adds gap between cards */
+    gap:50px; /* Adds gap between cards */
   }
   .testimonial-card {
     max-width: 90%; /* Adjust card width */
