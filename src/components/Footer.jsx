@@ -52,7 +52,7 @@ function Footer() {
           <span>WhatsApp</span>
         </div>
         <div className="footer-mobile-item" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-          <i className="fas fa-arrow-up"></i>
+          <a className="fas fa-arrow-up"></a>
           <span>Top</span>
         </div>
       </div>
