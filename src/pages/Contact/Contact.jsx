@@ -1,6 +1,6 @@
 import React, { useRef,useState,useEffect } from 'react';
 import emailjs from '@emailjs/browser';
-import bannerImage from '../../assets/contact-us-banner.jpg';
+import bannerImage from '../../assets/contact-us-banner.webp';
 import './Contact.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 

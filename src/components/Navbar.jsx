@@ -52,8 +52,8 @@ function Navbar() {
 
         {/* Contact Icons */}
         <div className="contact-icons">
-          <a href="tel:+1234567890" className="contact-item"><FaPhoneAlt className="phone" />+91 9400480459 | </a>
-          <a href="mailto:info@tekzai.com" className="contact-item"><FaEnvelope className="envelope" />tekzaiaws@gmail.com</a>
+          <a href="tel:+91 9400480459" className="contact-item"><FaPhoneAlt className="phone" />+91 9400480459 | </a>
+          <a href="tekzaiaws@gmail.com" className="contact-item"><FaEnvelope className="envelope" />tekzaiaws@gmail.com</a>
         </div>
 
         {/* Hamburger Menu */}

@@ -29,9 +29,9 @@ function Footer() {
         {/* Contact Info Section with Icons */}
         <div className="footer-contact">
           <h4>Contact Info</h4>
-          <p><i className="fas fa-map-marker-alt"></i>  554, PHC, Kasaragod, 671121, Kerala</p>
-          <p><i className="fas fa-phone-alt"></i>  +91 9400480459</p>
-          <p><i className="fas fa-envelope"></i>  tekzaiaws@gmail.com</p>
+          <p><a href="https://www.google.com/maps/search/?api=1&query=554+PHC+Kasaragod+671121+Kerala" className="fas fa-map-marker-alt" style={{color:"white", textDecoration:"none"}}></a>  554, PHC, Kasaragod, 671121, Kerala</p>
+          <p><a href="tel:+91 9400480459" className="fas fa-phone-alt" style={{color:"white", textDecoration:"none"}}></a>  +91 9400480459</p>
+          <p><a href="tekzaiaws@gmail.com" className="fas fa-envelope" style={{color:"white", textDecoration:"none"}}></a>  tekzaiaws@gmail.com</p>
         </div>
       </div>
 
@@ -44,11 +44,11 @@ function Footer() {
       {/* Mobile Sticky Footer */}
       <div className="footer-mobile">
         <div className="footer-mobile-item">
-          <i className="fas fa-phone"></i>
+          <a href="tel:+91 9400480459" className="fas fa-phone"></a>
           <span>Call</span>
         </div>
         <div className="footer-mobile-item">
-          <i className="fab fa-whatsapp"></i>
+          <a href="https://whatsapp.com" className="fab fa-whatsapp"></a>
           <span>WhatsApp</span>
         </div>
         <div className="footer-mobile-item" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>

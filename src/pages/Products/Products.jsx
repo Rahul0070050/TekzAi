@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Products.css';
-import bannerImage from '../../assets/products-banner-image.jpg';
+import bannerImage from '../../assets/products-banner-image.webp';
 import CRMlogo from '../../assets/p-3.png'; 
 import AMTlogo from '../../assets/p-2.png'; 
 import BKSlogo from '../../assets/p-5.png'; 

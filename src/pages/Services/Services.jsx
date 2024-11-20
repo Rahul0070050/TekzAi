@@ -2,7 +2,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Services.css';
-import bannerImage from '../../assets/services-banner-image.jpg';
+import bannerImage from '../../assets/services-banner-image.webp';
 import { FaCheck } from 'react-icons/fa';
 
 function ServiceCard({ title, description, points }) {
