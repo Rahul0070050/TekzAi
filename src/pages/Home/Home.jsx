@@ -179,7 +179,8 @@ function Home() {
   </p>
   <div className="products-home-grid">
     {products.map((product, index) => (
-      <div key={index} className="product-home-card">
+      <div key={index} className="product-home-card"
+      style={{ backgroundImage: `url(${homeBackground})` }}>
         <div className="product-home-icon">
           <img src={product.icon} alt={`${product.name} icon`} style={{ width: '170px', height: '130px' }} />
         </div>
