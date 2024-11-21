@@ -230,17 +230,20 @@ html {
     flex-direction: column; /* Stack overlay content */
     padding: 20px; /* Reduce padding */
     align-items: center; /* Center items */
+    
   }
 
   /* Product Logo */
   .product-logo {
-    position: static; /* Remove absolute positioning */
-    margin-bottom: 1rem; /* Add space below the logo */
-    align-items: center;  
+    position: static;  
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin-bottom: 1rem; 
   }
 
   .product-logo img {
-    width: 8rem; /* Reduce logo size */
+    width: 8rem; 
     height: auto;
   }
 
