@@ -1,11 +1,12 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import bannerBackground from '../../assets/home-banner.webp'; 
+import bannerBackground from '../../assets/home-banner.webp';
 import iconLMS from "../../assets/p-1.png";
 import iconAMT from "../../assets/p-2.png";
 import iconCRM from "../../assets/p-3.png";
 import iconBKS from "../../assets/p-5.png";
 import homeBackground from "../../assets/home-background-image1.jpeg"
+import video from "../../assets/bannervideo.mp4"
 
 import './Home.css';
 import { FaNetworkWired, FaCloud, FaTools, FaDatabase, FaCode, FaShieldAlt, FaCogs, FaChartLine } from 'react-icons/fa';
@@ -49,7 +50,7 @@ function Home() {
 
   const products = [
     {
-       icon: iconLMS,
+      icon: iconLMS,
       name: "TKZ-LMS",
       description: "Designed for seamless learning management, enhancing educational experiences with AI-enabled tracking and assessments.",
       keyPoints: [
@@ -102,10 +103,15 @@ function Home() {
 
   return (
     <>
-      <section
-        className="hero-section"
-        style={{ backgroundImage: `url(${bannerBackground})` }}
-      >
+      <section className="hero-section">
+        <video
+          className="hero-video"
+          src={video}
+          autoPlay
+          loop
+          muted
+          playsInline
+        ></video>
         <div className="hero-content">
           <h1>TEKZAI: Where Innovation Meets Technology.</h1>
           <p>Empowering businesses with cutting-edge technology solutions.</p>
@@ -122,18 +128,18 @@ function Home() {
           <div className="company-text">
             <h2>Your Trusted Technology Solutions Partner</h2>
             <p>
-              At TEKZAI, we believe in the transformative power of technology to drive growth and innovation. 
-              With a commitment to delivering high-impact solutions, we help businesses streamline operations, 
+              At TEKZAI, we believe in the transformative power of technology to drive growth and innovation.
+              With a commitment to delivering high-impact solutions, we help businesses streamline operations,
               enhance efficiency, and achieve sustainable success through advanced technological strategies.
             </p>
             <p>
-              Our team’s expertise spans diverse industries, allowing us to deliver solutions that are not only 
-              innovative but also tailored to meet the distinct needs of each client. Transparency, adaptability, 
-              and prompt execution are at the core of our approach, ensuring that every partnership is built on 
+              Our team’s expertise spans diverse industries, allowing us to deliver solutions that are not only
+              innovative but also tailored to meet the distinct needs of each client. Transparency, adaptability,
+              and prompt execution are at the core of our approach, ensuring that every partnership is built on
               trust and exceptional service.
             </p>
             <p>
-              TekzAi is more than a technology provider; we are your strategic partner, committed to helping you 
+              TekzAi is more than a technology provider; we are your strategic partner, committed to helping you
               navigate complex digital landscapes and achieve measurable results. Experience the TekzAi difference—
               where innovation meets precision and dedication drives excellence.
             </p>
@@ -145,7 +151,7 @@ function Home() {
 
       {/* Services Section */}
       <section className="services-section"
-      style={{ backgroundImage: `url(${homeBackground})` }}>
+        style={{ backgroundImage: `url(${homeBackground})` }}>
         <h2 className="services-title">Services</h2>
         <p className="services-description">
           We take pride in simplifying IT environments and delivering cost-effective solutions to our clients.
@@ -160,7 +166,7 @@ function Home() {
           ))}
         </div>
 
-      
+
         {/* Buttons Section */}
         <div className="services-buttons">
           <button className="services-button primary" onClick={() => navigate('/services')}>
@@ -173,33 +179,33 @@ function Home() {
       </section>
 
       <section className="products-home-section">
-  <h2 className="products-home-title">Our Products</h2>
-  <p className="products-home-description">
-    Our technology-driven solutions simplify daily tasks, improve productivity, minimize errors, and reduce costs.
-  </p>
-  <div className="products-home-grid">
-    {products.map((product, index) => (
-      <div key={index} className="product-home-card"
-      style={{ backgroundImage: `url(${homeBackground})` }}>
-        <div className="product-home-icon">
-          <img src={product.icon} alt={`${product.name} icon`} style={{ width: '170px', height: '130px' }} />
-        </div>
-        <h3 className="product-home-name">{product.name}</h3>
-        <p className="product-home-description">{product.description}</p>
-        <ul className="product-home-keypoints">
-          {product.keyPoints.map((point, idx) => (
-            <li key={idx} className="product-home-keypoint">✔ {point}</li>
+        <h2 className="products-home-title">Our Products</h2>
+        <p className="products-home-description">
+          Our technology-driven solutions simplify daily tasks, improve productivity, minimize errors, and reduce costs.
+        </p>
+        <div className="products-home-grid">
+          {products.map((product, index) => (
+            <div key={index} className="product-home-card"
+              style={{ backgroundImage: `url(${homeBackground})` }}>
+              <div className="product-home-icon">
+                <img src={product.icon} alt={`${product.name} icon`} style={{ width: '170px', height: '130px' }} />
+              </div>
+              <h3 className="product-home-name">{product.name}</h3>
+              <p className="product-home-description">{product.description}</p>
+              <ul className="product-home-keypoints">
+                {product.keyPoints.map((point, idx) => (
+                  <li key={idx} className="product-home-keypoint">✔ {point}</li>
+                ))}
+              </ul>
+              <div className="product-home-buttons">
+                <button className="product-home-button" onClick={() => navigate('/products')}>
+                  Learn More
+                </button>
+              </div>
+            </div>
           ))}
-        </ul>
-        <div className="product-home-buttons">
-          <button className="product-home-button" onClick={() => navigate('/products')}>
-            Learn More
-          </button>
         </div>
-      </div>
-    ))}
-  </div>
-</section>
+      </section>
 
 
       {/* CTA Section */}

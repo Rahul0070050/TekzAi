@@ -5,31 +5,31 @@ html {
 }
 .hero-section {
   position: relative;
-  height: 80vh; /* Adjust height as needed */
-  background-image: url('/src/assets/software-developer-6521720.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  height: 100vh; /* Maintain the same height */
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden; /* Ensures video stays within bounds */
   color: white;
   text-align: center;
 }
 
-
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures video covers the entire section */
+  z-index: -1; /* Places the video behind the content */
+}
 
 .hero-content {
   max-width: 800px;
   padding: 2rem;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5); /* Keeps the background overlay */
   border-radius: 8px;
-}
-
-.hero-content h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+  z-index: 1; /* Ensures content appears above the video */
 }
 
 .hero-content p {
