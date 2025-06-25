@@ -1,41 +1,43 @@
-import React, { useRef,useState,useEffect } from 'react';
-import emailjs from '@emailjs/browser';
-import bannerImage from '../../assets/contact-us-banner.webp';
-import './Contact.css';
-import '@fortawesome/fontawesome-free/css/all.min.css';
-
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import bannerImage from "../../assets/contact-us-banner.webp";
+import "./Contact.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function Contact() {
   const form = useRef();
-  const [isLoading, setIsLoading] = useState(false); 
-  const [successMessage, setSuccessMessage] = useState(''); 
-  const [activeCard, setActiveCard] = useState(null); 
+  const [isLoading, setIsLoading] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
+  const [activeCard, setActiveCard] = useState(null);
 
   const sendEmail = (e) => {
     e.preventDefault();
-    setIsLoading(true); 
-    setSuccessMessage(''); 
-  
-    emailjs.sendForm(
-      import.meta.env.VITE_EMAILJS_SERVICE_ID,
-      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-      form.current,
-      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-    )
-    .then((result) => {
-      console.log('Success:', result.text);
-      setIsLoading(false); 
-      setSuccessMessage('Thank you for contacting us, we will be in touch shortly.');
-      console.log('EmailJS Response:', result); // Log success response
+    setIsLoading(true);
+    setSuccessMessage("");
 
-      e.target.reset(); // Reset form fields
-    })
-    .catch((error) => {
-      console.error('Error:', error); // Log error details
-      setIsLoading(false); 
-      alert("Failed to send message. Please try again.");
-      console.error('EmailJS Error:', error); // Log any errors
-    });
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        form.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then((result) => {
+        console.log("Success:", result.text);
+        setIsLoading(false);
+        setSuccessMessage(
+          "Thank you for contacting us, we will be in touch shortly."
+        );
+        console.log("EmailJS Response:", result); // Log success response
+
+        e.target.reset(); // Reset form fields
+      })
+      .catch((error) => {
+        console.error("Error:", error); // Log error details
+        setIsLoading(false);
+        alert("Failed to send message. Please try again.");
+        console.error("EmailJS Error:", error); // Log any errors
+      });
   };
 
   // Function to set only one card as active
@@ -43,24 +45,28 @@ function Contact() {
     setActiveCard((prev) => (prev === cardIndex ? null : cardIndex)); // Toggle the same card or set a new active card
   };
 
-
-
   return (
     <div className="contact-page">
       {/* Banner Section */}
-      <section className="contact-banner-section" style={{ backgroundImage: `url(${bannerImage})` }}>
+      <section
+        className="contact-banner-section"
+        style={{ backgroundImage: `url(${bannerImage})` }}
+      >
         <div className="contact-banner-overlay">
           <h1>Have any questions or need support? We're here to help!</h1>
         </div>
       </section>
 
-         {/* Contact Information Cards */}
+      {/* Contact Information Cards */}
       <div className="contact-info-cards">
         <div
-          className={`contact-card ${activeCard === 0 ? 'active' : ''}`}
+          className={`contact-card ${activeCard === 0 ? "active" : ""}`}
           onClick={() => {
             toggleCard(0);
-            window.open("https://www.google.com/maps/search/?api=1&query=554+PHC+Kasaragod+671121+Kerala", "_blank");
+            window.open(
+              "https://www.google.com/maps/search/?api=1&query=554+PHC+Kasaragod+671121+Kerala",
+              "_blank"
+            );
           }}
         >
           <i className="fas fa-map-marker-alt"></i>
@@ -69,7 +75,7 @@ function Contact() {
         </div>
 
         <div
-          className={`contact-card ${activeCard === 1 ? 'active' : ''}`}
+          className={`contact-card ${activeCard === 1 ? "active" : ""}`}
           onClick={() => toggleCard(1)}
         >
           <div>
@@ -80,7 +86,7 @@ function Contact() {
         </div>
 
         <div
-          className={`contact-card ${activeCard === 2 ? 'active' : ''}`}
+          className={`contact-card ${activeCard === 2 ? "active" : ""}`}
           onClick={() => {
             toggleCard(2);
             window.open("mailto:info@tekz.ai");
@@ -92,7 +98,7 @@ function Contact() {
         </div>
 
         <div
-          className={`contact-card ${activeCard === 3 ? 'active' : ''}`}
+          className={`contact-card ${activeCard === 3 ? "active" : ""}`}
           onClick={() => {
             toggleCard(3);
             window.open("tel:+919400480459");
@@ -104,38 +110,58 @@ function Contact() {
         </div>
       </div>
 
-
-      
-        <div className='contact-us'>
+      <div className="contact-us">
         <h2>Contact Us</h2>
-        <p>We’d love to hear from you. Fill out the form below to get in touch with us.</p>
-        </div>
+        <p>
+          We’d love to hear from you. Fill out the form below to get in touch
+          with us.
+        </p>
+      </div>
 
-
-  {/* Contact Form Section */}
-  <section className="contact-container">
+      {/* Contact Form Section */}
+      <section className="contact-container">
         <div className="contact-form">
-           {/* Loader and Success Message */}
-           {isLoading && <div className="loading-message">Submitting...</div>}
-          {successMessage && <div className="success-message">{successMessage}</div>}
+          {/* Loader and Success Message */}
+          {isLoading && <div className="loading-message">Submitting...</div>}
+          {successMessage && (
+            <div className="success-message">{successMessage}</div>
+          )}
           <form ref={form} onSubmit={sendEmail}>
             <label htmlFor="name">Name</label>
-            <input type="text" name="from_name" placeholder="Your Name" required />
+            <input
+              type="text"
+              name="from_name"
+              placeholder="Your Name"
+              required
+            />
 
             <label htmlFor="email">Email</label>
-            <input type="email" name="from_email" placeholder="Your Email" required />
+            <input
+              type="email"
+              name="from_email"
+              placeholder="Your Email"
+              required
+            />
 
             <label htmlFor="phone">Phone</label>
-            <input type="tel" name="phone" placeholder="Your Phone Number" required />
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Your Phone Number"
+              required
+            />
 
             <label htmlFor="message">Message</label>
-            <textarea name="message" placeholder="Your Message" required></textarea>
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              required
+            ></textarea>
 
             <button type="submit">Send Enquiry</button>
           </form>
         </div>
-        </section>
-
+      </section>
     </div>
   );
 }
